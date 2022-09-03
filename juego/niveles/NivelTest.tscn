@@ -1,0 +1,690 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://juego/bloques/ColumnaBloques.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/bloques/BloqueLargo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/bloques/BloqueMedio.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/bloques/BloquePendiente.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/bloques/BloqueHexagono.tscn" type="PackedScene" id=6]
+[ext_resource path="res://juego/bloques/BloqueFinal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://juego/bloques/BloquePendienteMedia.tscn" type="PackedScene" id=8]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0862745, 0.270588, 0.254902, 1 )
+
+[sub_resource type="PlaneMesh" id=1]
+material = SubResource( 2 )
+size = Vector2( 50, 50 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 25, 0.018, 25 )
+
+[node name="NivelTest" type="Node"]
+
+[node name="Suelo" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Suelo"]
+mesh = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Suelo"]
+shape = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.684845, 0.633062, 0.360861, -0.175152, -0.33769, 0.924818, 0.707326, -0.696562, -0.120383, -0.0169239, 28.4893, -1.76952 )
+light_color = Color( 0.878431, 0.847059, 0.0235294, 1 )
+light_energy = 1.881
+light_specular = 0.06
+shadow_enabled = true
+shadow_bias = 0.141
+
+[node name="Bordes" type="Spatial" parent="."]
+
+[node name="Norte" type="Spatial" parent="Bordes"]
+
+[node name="ColumnaBloques" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.03483, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques2" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02144, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques3" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98564, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques4" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97225, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques5" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92701, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques6" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.913612, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques7" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00409698, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques8" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951477, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques9" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93252, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques10" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94592, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques11" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98172, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques12" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99511, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques13" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04035, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques14" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05374, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques15" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97145, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques16" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.91883, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques17" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93319, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques18" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9466, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques19" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9824, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques20" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9958, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques21" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.041, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques22" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0544, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques23" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9721, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques24" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9195, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques25" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9005, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques26" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9139, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques27" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9497, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques28" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9631, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques29" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0084, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques30" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0218, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques31" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9395, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques32" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8869, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques47" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8017, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques48" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8543, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques49" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8399, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques50" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8266, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques51" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7908, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques52" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7774, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques53" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7321, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques54" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7187, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques55" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.801, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques56" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8536, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques57" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8726, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques58" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8592, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques59" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8234, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques60" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8504, -0.265522, -25.4776 )
+
+[node name="ColumnaBloques61" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76476, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques62" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75137, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques63" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.83366, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques64" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.88628, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques65" parent="Bordes/Norte" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7397, -0.307553, -25.5071 )
+
+[node name="Sur" type="Spatial" parent="Bordes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0802307, -0.109105, 49.8537 )
+
+[node name="ColumnaBloques" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.03483, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques2" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02144, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques3" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98564, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques4" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97225, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques5" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92701, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques6" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.913612, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques7" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00409698, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques8" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951477, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques9" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93252, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques10" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94592, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques11" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98172, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques12" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99511, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques13" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04035, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques14" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05374, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques15" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97145, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques16" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.91883, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques17" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93319, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques18" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9466, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques19" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9824, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques20" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9958, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques21" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.041, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques22" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0544, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques23" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9721, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques24" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9195, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques25" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9005, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques26" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9139, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques27" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9497, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques28" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9631, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques29" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0084, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques30" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0218, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques31" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9395, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques32" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8869, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques47" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8017, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques48" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8543, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques49" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8399, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques50" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8266, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques51" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7908, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques52" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7774, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques53" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7321, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques54" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7187, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques55" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.801, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques56" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8536, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques57" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8726, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques58" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8592, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques59" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8234, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques60" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8504, -0.265522, -25.4776 )
+
+[node name="ColumnaBloques61" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76476, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques62" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75137, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques63" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.83366, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques64" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.88628, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques65" parent="Bordes/Sur" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7397, -0.307553, -25.5071 )
+
+[node name="Este" type="Spatial" parent="Bordes"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.255663, 0, 0 )
+
+[node name="ColumnaBloques" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.03483, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques2" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02144, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques3" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98564, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques4" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97225, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques5" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92701, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques6" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.913612, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques7" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00409698, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques8" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951477, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques9" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93252, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques10" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94592, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques11" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98172, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques12" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99511, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques13" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04035, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques14" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05374, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques15" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97145, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques16" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.91883, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques17" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93319, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques18" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9466, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques19" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9824, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques20" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9958, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques21" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.041, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques22" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0544, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques23" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9721, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques24" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9195, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques25" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9005, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques26" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9139, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques27" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9497, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques28" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9631, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques29" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0084, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques30" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0218, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques31" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9395, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques32" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8869, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques47" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8017, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques48" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8543, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques49" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8399, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques50" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8266, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques51" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7908, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques52" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7774, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques53" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7321, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques54" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7187, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques55" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.801, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques56" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8536, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques57" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8726, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques58" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8592, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques59" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8234, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques60" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8504, -0.265522, -25.4776 )
+
+[node name="ColumnaBloques61" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76476, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques62" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75137, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques63" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.83366, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques64" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.88628, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques65" parent="Bordes/Este" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7397, -0.307553, -25.5071 )
+
+[node name="Oeste" type="Spatial" parent="Bordes"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 50.5491, 0, 0 )
+
+[node name="ColumnaBloques" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.03483, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques2" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02144, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques3" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98564, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques4" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97225, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques5" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92701, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques6" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.913612, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques7" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00409698, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques8" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951477, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques9" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93252, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques10" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94592, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques11" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98172, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques12" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99511, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques13" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04035, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques14" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05374, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques15" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97145, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques16" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.91883, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques17" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93319, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques18" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9466, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques19" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9824, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques20" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9958, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques21" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.041, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques22" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0544, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques23" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9721, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques24" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9195, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques25" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9005, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques26" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9139, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques27" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9497, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques28" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9631, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques29" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0084, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques30" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0218, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques31" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9395, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques32" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8869, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques47" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8017, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques48" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8543, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques49" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8399, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques50" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8266, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques51" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7908, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques52" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7774, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques53" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7321, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques54" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7187, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques55" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.801, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques56" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8536, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques57" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8726, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques58" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8592, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques59" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8234, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques60" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8504, -0.265522, -25.4776 )
+
+[node name="ColumnaBloques61" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76476, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques62" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75137, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques63" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.83366, -0.307553, -25.4572 )
+
+[node name="ColumnaBloques64" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.88628, -0.307553, -25.4614 )
+
+[node name="ColumnaBloques65" parent="Bordes/Oeste" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7397, -0.307553, -25.5071 )
+
+[node name="Plataforma" type="Spatial" parent="."]
+
+[node name="BloqueLargo" parent="Plataforma" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63056, -0.354562, 0 )
+
+[node name="BloqueLargo2" parent="Plataforma" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.66583, -0.354562, 0 )
+
+[node name="BloqueMedio" parent="Plataforma" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0131, 0.152647, 0 )
+
+[node name="BloqueFinal" parent="Plataforma" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.81578, 0, -2.00934 )
+
+[node name="BloquePendiente" parent="Plataforma" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7092, -0.127715, -4.26129 )
+
+[node name="BloqueHexagono" parent="Plataforma" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4912, 0, 0 )
+
+[node name="BloquePendienteMedia" parent="Plataforma" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4658, 0, 1.26755 )
+
+[node name="Godotin" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.496373, 0, 0.0601117, 0, 0.5, 0, -0.0601117, 0, -0.496373, 0, 0, 0 )
+fuerza_salto = 12.0
