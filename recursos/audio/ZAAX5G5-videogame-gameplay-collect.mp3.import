@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ZAAX5G5-videogame-gameplay-collect.mp3-cf361fcc042e0f1583f2260eec2373f2.mp3str"
+
+[deps]
+
+source_file="res://recursos/audio/ZAAX5G5-videogame-gameplay-collect.mp3"
+dest_files=[ "res://.import/ZAAX5G5-videogame-gameplay-collect.mp3-cf361fcc042e0f1583f2260eec2373f2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

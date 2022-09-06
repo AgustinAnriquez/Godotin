@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SierraSFX.ogg-a58536e634af6a64d3c63b89511d7415.oggstr"
+
+[deps]
+
+source_file="res://recursos/audio/SierraSFX.ogg"
+dest_files=[ "res://.import/SierraSFX.ogg-a58536e634af6a64d3c63b89511d7415.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1614,6 +1614,8 @@ animation = "shooting"
 animation = "run-cycle"
 
 [sub_resource type="AnimationNodeBlend2" id=37]
+filter_enabled = true
+filters = [ "Armadura/Skeleton:l-ARMCONTROL", "Armadura/Skeleton:l-ARMORIENT", "Armadura/Skeleton:l-arm", "Armadura/Skeleton:l-forearm", "Armadura/Skeleton:r-ARMCONTROL", "Armadura/Skeleton:r-ARMORIENT", "Armadura/Skeleton:r-arm", "Armadura/Skeleton:r-forearm" ]
 
 [sub_resource type="AnimationNodeBlend2" id=27]
 
@@ -1629,7 +1631,7 @@ input_1/name = "en_aire"
 input_1/auto_advance = false
 
 [sub_resource type="AnimationNodeBlendTree" id=29]
-graph_offset = Vector2( -283.918, 41.4672 )
+graph_offset = Vector2( -205.935, 97.8006 )
 nodes/Animation/node = SubResource( 26 )
 nodes/Animation/position = Vector2( -255.813, 213.57 )
 "nodes/Animation 2/node" = SubResource( 25 )
@@ -1651,10 +1653,11 @@ nodes/TimeScale/position = Vector2( -20, 200 )
 nodes/TransicionSueloAire/node = SubResource( 36 )
 nodes/TransicionSueloAire/position = Vector2( 700, 180 )
 nodes/output/position = Vector2( 1340, 260 )
-node_connections = [ "output", 0, "MezclaDisparar", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "TimeScale", 0, "Animation", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "MezclaIdleCaminar", 0, "Animation 2", "MezclaIdleCaminar", 1, "TimeScale" ]
+node_connections = [ "output", 0, "MezclaDisparar", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "TimeScale", 0, "Animation", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "MezclaIdleCaminar", 0, "Animation 2", "MezclaIdleCaminar", 1, "TimeScale" ]
 
 [node name="Godotin" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+collision_mask = 30
 script = ExtResource( 2 )
 __meta__ = {
 "__editor_plugin_screen__": "3D"
@@ -1843,3 +1846,10 @@ parameters/MezclaSaltarCaer/blend_amount = 1.0
 parameters/TimeScale/scale = 1.0
 parameters/TransicionSueloAire/current = 0
 script = ExtResource( 3 )
+
+[node name="Linterna" type="SpotLight" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.465, 1.268, 0.356 )
+light_color = Color( 0.976471, 0.984314, 0, 1 )
+light_energy = 0.0
+spot_range = 7.2
+spot_angle = 12.09
